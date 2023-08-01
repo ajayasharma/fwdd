@@ -1,12 +1,7 @@
 // Your web app's Firebase configuration
+// Replace the config with your firebase application configuration. 
 const firebaseConfig = {
-  apiKey: "AIzaSyBC0k9VcwYUsc1CQ5yIGnVDKASXy1PmfX0",
-  authDomain: "my-website-2535a.firebaseapp.com",
-  databaseURL: "https://my-website-2535a-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "my-website-2535a",
-  storageBucket: "my-website-2535a.appspot.com",
-  messagingSenderId: "499690916091",
-  appId: "1:499690916091:web:16b5982ad5ad71c63cc85e"
+  // Your application configuration here
 };
 
 // Initialize Firebase
