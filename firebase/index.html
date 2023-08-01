@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 520px;
+            margin: auto;
+            margin-top: 100px;
+            font-family: sans-serif;
+        }
+        h1{
+            margin-bottom: 30px;
+        }
+        input,
+        textarea{
+            width: calc(100% - 20px);
+            display: block;
+            padding: 6px;
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        textarea{
+            height: 100px;
+        }
+
+        table{
+            width: 100%;
+            border-spacing: 0px;
+        }
+        th{
+            text-align: left;
+        }
+        table td:focus{
+            background-color: #eae9e9;
+        }
+        td:nth-child(3){
+            width: 400px;
+        }
+        td:last-child{
+            text-align: right;
+        }
+        table th,
+        table td{
+            padding: 15px 0px;
+            border-bottom: 1px solid #cacaca;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div>
+            <div id="contactForm">
+                Name: <input id="name" name="name" type="text" value=""><br>
+                Email: <input id="email" name="email" type="text" value=""><br>
+                Message: <textarea id="message" name="message" rows="5" cols="40"></textarea><br>
+                <button onclick="saveData()">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Realtime fetching From Firebase Databases</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="mydata">
+                <tr><td colspan="4">No data available</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- add firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database-compat.js"></script>
+    <script src="./firebase.js"></script>
+</body>
+</html>
